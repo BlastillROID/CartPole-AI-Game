@@ -17,7 +17,6 @@ def model_data_preparation():
     training_data = []
     accepted_scores = []
     for game_index in range(intial_games):
-        print('Hello')
         score = 0
         game_memory = []
         previous_observation = []
