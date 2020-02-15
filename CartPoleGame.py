@@ -9,9 +9,9 @@ from keras.models import Sequential
 env = gym.make('CartPole-v1')
 env.reset()
 
-goal_steps = 500
+goal_steps = 5000
 score_requirements = 60
-intial_games = 10000
+intial_games = 100000
 
 def model_data_preparation():
     training_data = []
