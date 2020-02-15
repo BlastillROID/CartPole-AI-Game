@@ -11,6 +11,4 @@ for step_index in range(1000):
     print("reward: {}".format(reward))
     print("done: {}".format(done))
     print("info: {}".format(info))
-    if done:
-        print("HI mounir")
-        break
+

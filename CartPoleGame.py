@@ -1,10 +1,10 @@
 import gym
 import random
 import numpy as np
-from keras.models import Sequential
+
 from keras.layers import Dense
 from keras.optimizers import Adam
-
+from keras.models import Sequential
 
 env = gym.make('CartPole-v1')
 env.reset()
@@ -65,6 +65,7 @@ def train_model(training_data):
     model.fit(X, y, epochs=10)
     return model
 
+training_data = model_data_preparation()
 
 trained_model = train_model(training_data)
 
@@ -84,9 +85,9 @@ for each_game in range(100):
         new_observation, reward, done, info = env.step(action)
         prev_obs = new_observation
         score+=reward
+        print(score)
         if done:
             break
-
     env.reset()
     scores.append(score)
 
